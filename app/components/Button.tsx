@@ -1,3 +1,4 @@
+import { motion, useAnimationControls } from 'framer-motion'
 import Image from 'next/image'
 
 type colorName = "red" | "blue" | "orange" | "purple";
@@ -6,15 +7,24 @@ type ButtonProps = {
   color: colorName;
 };
 
+
 export default function Button({ text, color }: ButtonProps) {
+	const controls = useAnimationControls()
+
   return (
-    <div className="h-80 flex flex-row border-solid border-white border-2">
+    <motion.div
+      whileHover={{
+        // scale: 1.2,
+        transition: { ease: "easeOut", duration: 0.2 },
+      }}
+      className="h-80 flex flex-row border-solid border-white border-2"
+    >
       <div className="flex flex-1 justify-center items-center text-[30px]">
         {text}
       </div>
-      <div 
-          style={{ "--bg": `var(--${color})` } as React.CSSProperties}
-          className="w-80 bg-[var(--bg)]"
+      <div
+        style={{ "--bg": `var(--${color})` } as React.CSSProperties}
+        className="w-80 bg-[var(--bg)]"
       >
         <Image
           className="m-10"
@@ -24,6 +34,6 @@ export default function Button({ text, color }: ButtonProps) {
           alt="A big fat arrow"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
