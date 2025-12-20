@@ -16,7 +16,7 @@ export default function RootLayout({
       className="size-full"
     >
       <body
-        className={`size-full ${JetBrainsMono.variable} flex-1 antialiased flex justify-center items-center`}
+        className={`size-full ${JetBrainsMono.variable} flex-1 antialiased flex justify-center items-center p-50`}
       >
         {children}
       </body>

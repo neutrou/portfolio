@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import Button from "./components/Button"
+import {SummaryButton, AboutButton, ProjectsButton, StackButton} from "./components/Button"
 import { motion, easeOut } from "framer-motion"
 
 export default function Home() {
@@ -38,15 +38,15 @@ export default function Home() {
           animate={animateReveal}
           transition={transitionReveal}
           onAnimationComplete={() => setRevealed(true)}
-          className="bg-transparent border-solid border-white border-2"
-          />
+          className="bg-transparent border-texture"
+        />
         <div className="bg-(--background) flex-1"/>
       </div>
       <div className="h-470 w-432 flex flex-col gap-50">
-        <Button text="Summary" color="purple"/>
-        <Button text="About me" color="red"/>
-        <Button text="Projects" color="blue"/>
-        <Button text="Tech Stack" color="orange"/>
+        <SummaryButton/>
+        <AboutButton/>
+        <ProjectsButton/>
+        <StackButton/>
       </div>
     </section>
   );

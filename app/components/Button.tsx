@@ -1,23 +1,20 @@
-import { motion, useAnimationControls } from 'framer-motion'
-import Image from 'next/image'
+"use client"
 
-type colorName = "red" | "blue" | "orange" | "purple";
+import Image from 'next/image'
+import Link from 'next/link'
+import { colorName } from '@/types/ui'
+
 type ButtonProps = {
   text: string;
   color: colorName;
+  url: string;
 };
 
-
-export default function Button({ text, color }: ButtonProps) {
-	const controls = useAnimationControls()
-
+export default function Button({ text, color, url }: ButtonProps) {
   return (
-    <motion.div
-      whileHover={{
-        // scale: 1.2,
-        transition: { ease: "easeOut", duration: 0.2 },
-      }}
-      className="h-80 flex flex-row border-solid border-white border-2"
+    <Link
+      href={url}
+      className="h-80 flex flex-row border-texture"
     >
       <div className="flex flex-1 justify-center items-center text-[30px]">
         {text}
@@ -34,6 +31,19 @@ export default function Button({ text, color }: ButtonProps) {
           alt="A big fat arrow"
         />
       </div>
-    </motion.div>
+    </Link>
   );
 }
+
+export function SummaryButton() {
+	return (<Button text="Summary" color="purple" url="/summary"/>)
+};
+export function AboutButton() {
+	return (<Button text="About me" color="red" url="/about"/>)
+};
+export function ProjectsButton() {
+	return (<Button text="Projects" color="blue" url="/projects"/>)
+};
+export function StackButton() {
+	return (<Button text="Tech Stack" color="orange" url="/stack"/>)
+};
