@@ -12,14 +12,28 @@ type WindowProps = {
   children: ReactNode;
 };
 
-function Dots() {
+type DotProps = {
+  size: boolean;
+};
+
+function Dots({ size }: DotProps) {
+  if (size) {
+    return (
+      <section className="absolute right-3 flex items-center justify-center h-19 flex gap-2">
+        <div className="size-3 rounded-full bg-white" />
+        <div className="size-3 rounded-full bg-white" />
+        <div className="size-3 rounded-full bg-white" />
+      </section>
+    );
+  }
   return (
-    <section className="absolute right-15 top-45 flex gap-10">
-      <div className="size-15 rounded-full bg-white" />
-      <div className="size-15 rounded-full bg-white" />
-      <div className="size-15 rounded-full bg-white" />
+    <section className="absolute right-2 flex items-center justify-center h-8 flex gap-2">
+      <div className="size-2 rounded-full bg-white" />
+      <div className="size-2 rounded-full bg-white" />
+      <div className="size-2 rounded-full bg-white" />
     </section>
   );
+
 }
 
 export function Window({
@@ -30,20 +44,22 @@ export function Window({
   height = "100%",
   children,
 }: WindowProps) {
+  const size = title !== undefined;
+
   return (
     <section
       style={{ width, height }}
       className="relative flex flex-col border-texture"
     >
         <div
-          style={{ "--bg": `var(--${color})` } as CSSProperties}
-          className={`flex min-h-100 w-full items-center justify-center border-b-2 bg-[var(--bg)] text-[50px] ${titleFont}`}
+          style={{"--bg": `var(--${color})`} as CSSProperties}
+          className={`flex w-full items-center justify-center border-b-2 bg-[var(--bg)] text-4xl py-4 ${titleFont}`}
         >
           {title}
         </div>
-      <div className="size-full p-20 md:p-30 lg:p-40">{children}</div>
+      <div className="size-full p-5">{children}</div>
 
-      <Dots />
+      <Dots size={title !== undefined}/>
     </section>
   );
 }
