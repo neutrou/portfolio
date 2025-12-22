@@ -14,20 +14,20 @@ export default function Button({ text, color, url }: ButtonProps) {
   return (
     <Link
       href={url}
-      className="h-80 flex flex-row border-texture"
+      className="h-15 flex flex-row border-texture"
     >
-      <div className="flex flex-1 justify-center items-center text-[30px]">
+      <div className="flex flex-1 justify-center items-center text-3xl">
         {text}
       </div>
       <div
         style={{ "--bg": `var(--${color})` } as React.CSSProperties}
-        className="w-80 bg-[var(--bg)]"
+        className="flex justify-center items-center w-15 bg-[var(--bg)]"
       >
         <Image
-          className="m-10"
+          className=""
           src="/arrow.svg"
-          width={60}
-          height={60}
+          width={50}
+          height={50}
           alt="A big fat arrow"
         />
       </div>

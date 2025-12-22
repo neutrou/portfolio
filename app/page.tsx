@@ -13,12 +13,12 @@ export default function Home() {
   };
   const animateRevealA = {
     scaleX: [0, 1, 1],
-    height: [0, 0, 470],
+    height: [0, 0, 60],
     borderColor: ["#fff", "#fff", "#fff0"],
   };
   const animateRevealB = {
     scaleX: [0, 1, 1, 1],
-    height: [0, 0, 470, 470],
+    height: [0, 0, 60, 60],
     borderColor: ["#fff", "#fff", "#fff", "#fff0"],
   };
   /*choose between A and B*/
@@ -31,18 +31,18 @@ export default function Home() {
 
   return (
     <section className="flex-1 flex items-center justify-center">
-      <div className={`h-470 w-432 absolute flex flex-col ${revealed ? "pointer-events-none" : "pointer-events-auto"}`}>
-        <div className="bg-(--background) flex-1"/>
-        <motion.div
-          initial={initialReveal}
-          animate={animateReveal}
-          transition={transitionReveal}
-          onAnimationComplete={() => setRevealed(true)}
-          className="bg-transparent border-texture"
-        />
-        <div className="bg-(--background) flex-1"/>
-      </div>
-      <div className="h-470 w-432 flex flex-col gap-50">
+      {/* <div className={`h-60 w-70 absolute flex flex-col ${revealed ? "pointer-events-none" : "pointer-events-auto"}`}> */}
+        {/* <div className="bg-(--background) flex-1"/> */}
+          {/* <motion.div
+            initial={initialReveal}
+            animate={animateReveal}
+            transition={transitionReveal}
+            onAnimationComplete={() => setRevealed(true)}
+            className="bg-transparent border-texture"
+          /> */}
+          {/* <div className="bg-(--background) flex-1"/> */}
+      {/* </div> */}
+      <div className="h-90 w-70 flex flex-col justify-between">
         <SummaryButton/>
         <AboutButton/>
         <ProjectsButton/>

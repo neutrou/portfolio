@@ -13,10 +13,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"
-      className="min-h-screen w-full"
+      className="size-full"
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body
-        className={`flex-1 ${JetBrainsMono.variable} flex-1 antialiased flex p-20`}
+        className={`size-full ${JetBrainsMono.variable} flex-1 antialiased flex p-5`}
       >
         {children}
       </body>
