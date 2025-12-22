@@ -13,10 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en"
-      className="size-full"
+      className="min-h-screen w-full"
     >
       <body
-        className={`size-full ${JetBrainsMono.variable} flex-1 antialiased flex justify-center items-center p-50`}
+        className={`flex-1 ${JetBrainsMono.variable} flex-1 antialiased flex p-20`}
       >
         {children}
       </body>

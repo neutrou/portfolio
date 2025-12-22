@@ -30,7 +30,7 @@ export default function Home() {
   };
 
   return (
-    <section>
+    <section className="flex-1 flex items-center justify-center">
       <div className={`h-470 w-432 absolute flex flex-col ${revealed ? "pointer-events-none" : "pointer-events-auto"}`}>
         <div className="bg-(--background) flex-1"/>
         <motion.div

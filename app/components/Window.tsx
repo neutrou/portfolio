@@ -1,84 +1,49 @@
-"use client"
+"use client";
 
-import { colorName } from '@/types/ui'
-
-type MainWindowProps = {
-  title: string;
-  color: colorName;
-  children: React.ReactNode;
-};
-
-type SimpleWindowProps = {
-	color: colorName;
-	width: string;
-	height: string;
-	children: React.ReactNode;
-}
+import { colorName } from "@/types/ui";
+import type { ReactNode, CSSProperties } from "react";
 
 type WindowProps = {
-  title: string;
-  titleFont: string;
+  title?: string;
+  titleFont?: string;
   color: colorName;
-  width: string;
-  height: string;
-  children: React.ReactNode;
+  width?: string;
+  height?: string;
+  children: ReactNode;
 };
 
-function Dot() {
+function Dots() {
   return (
-    <section
-      className='absolute flex flex-row gap-20 right-30 top-40'
-    >
-      <div className='size-20 bg-white rounded-full'/>
-      <div className='size-20 bg-white rounded-full'/>
-      <div className='size-20 bg-white rounded-full'/>
+    <section className="absolute right-15 top-45 flex gap-10">
+      <div className="size-15 rounded-full bg-white" />
+      <div className="size-15 rounded-full bg-white" />
+      <div className="size-15 rounded-full bg-white" />
     </section>
   );
 }
 
-export function Window(props: WindowProps) {
+export function Window({
+  title,
+  titleFont = "",
+  color,
+  width = "100%",
+  height = "100%",
+  children,
+}: WindowProps) {
   return (
     <section
-      style={{ width: props.width, height: props.height }}
-      className={`relative flex flex-col border-texture`}>
-      <div
-        style={{ "--bg": `var(--${props.color})` } as React.CSSProperties}
-        className={`w-full min-h-100 bg-[var(--bg)] flex items-center justify-center text-[50px] ${props.titleFont} border-b-2`}
-      >
-        {props.title}
-      </div>
-      <div className={'size-full p-40'}>
-        {props.children}
-      </div>
-      <Dot/>
+      style={{ width, height }}
+      className="relative flex flex-col border-texture"
+    >
+        <div
+          style={{ "--bg": `var(--${color})` } as CSSProperties}
+          className={`flex min-h-100 w-full items-center justify-center border-b-2 bg-[var(--bg)] text-[50px] ${titleFont}`}
+        >
+          {title}
+        </div>
+      <div className="size-full p-20 md:p-30 lg:p-40">{children}</div>
+
+      <Dots />
     </section>
-  );
-}
-
-export function SimpleWindow({ color, width, height, children }: SimpleWindowProps) {
-  return (
-    <Window
-      title=""
-      titleFont=""
-      color={color}
-      width={width}
-      height={height}
-    >
-      {children}
-    </Window>
-  );
-}
-
-export function MainWindow({ title, color, children }: MainWindowProps) {
-  return (
-    <Window
-      title={title}
-      titleFont='font-extrabold'
-      color={color}
-      width="100%"
-      height="100%"
-    >
-      {children}
-    </Window>
   );
 }
