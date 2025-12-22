@@ -10,7 +10,7 @@ type ButtonProps = {
   url: string;
 };
 
-export default function Button({ text, color, url }: ButtonProps) {
+export function Button({ text, color, url }: ButtonProps) {
   return (
     <Link
       href={url}
@@ -34,16 +34,3 @@ export default function Button({ text, color, url }: ButtonProps) {
     </Link>
   );
 }
-
-export function SummaryButton() {
-	return (<Button text="Summary" color="purple" url="/summary"/>)
-};
-export function AboutButton() {
-	return (<Button text="About me" color="red" url="/about"/>)
-};
-export function ProjectsButton() {
-	return (<Button text="Projects" color="blue" url="/projects"/>)
-};
-export function StackButton() {
-	return (<Button text="Tech Stack" color="orange" url="/stack"/>)
-};
