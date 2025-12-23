@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import {SummaryButton, AboutButton, ProjectsButton, StackButton} from "./components/Button"
+import { Button } from "./components/Button"
 import { motion, easeOut } from "framer-motion"
 
 export default function Home() {
@@ -45,10 +45,10 @@ export default function Home() {
           <div className="bg-(--background) flex-1"/>
       </div>
       <div className="h-90 w-70 flex flex-col justify-between">
-        <SummaryButton/>
-        <AboutButton/>
-        <ProjectsButton/>
-        <StackButton/>
+        <Button text="Summary" color="purple" url="/summary"/>
+        <Button text="About me" color="red" url="/about"/>
+        <Button text="Projects" color="blue" url="/projects"/>
+        <Button text="Tech Stack" color="orange" url="/stack"/>
       </div>
     </section>
   );
