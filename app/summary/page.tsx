@@ -7,7 +7,7 @@ export default function Summary() {
       title="Summary"
       titleFont="font-extrabold"
       color="purple"
-      height="fit-content"
+      height="100%"
     >
       <div className="flex-1 flex flex-col gap-5">
         <Window
@@ -26,7 +26,7 @@ export default function Summary() {
           <div className="text-xs w-auto py-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-          <Button text="Summary" color="purple" url="/summary"/>
+          <Button text="About me" color="red" url="/about" size="small" />
         </Window>
         <Window
           color="blue"
@@ -44,7 +44,7 @@ export default function Summary() {
           <div className="text-xs w-auto py-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </div>
-          <Button text="Projects" color="blue" url="/projects"/>
+          <Button text="Projects" color="blue" url="/projects" size="small"/>
         </Window>
       </div>
 

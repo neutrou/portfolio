@@ -57,7 +57,7 @@ export function Window({
         >
           {title}
         </div>
-      <div className="size-full p-5">{children}</div>
+      <div className="size-full p-5 overflow-auto">{children}</div>
 
       <Dots size={title !== undefined}/>
     </section>
