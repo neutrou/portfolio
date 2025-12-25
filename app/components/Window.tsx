@@ -1,9 +1,10 @@
 "use client";
 
-import { colorName } from "@/types/ui";
-import type { ReactNode, CSSProperties } from "react";
+import { colorName, windowTypes } from "@/types/ui";
+import { useState, ReactNode, CSSProperties } from "react";
 
 type WindowProps = {
+  type: windowTypes;
   title?: string;
   titleFont?: string;
   color: colorName;
@@ -13,11 +14,11 @@ type WindowProps = {
 };
 
 type DotProps = {
-  size: boolean;
+  type: windowTypes;
 };
 
-function Dots({ size }: DotProps) {
-  if (size) {
+function Dots({ type }: DotProps) {
+  if (type === "main") {
     return (
       <section className="absolute right-3 flex items-center justify-center h-19 flex gap-2">
         <div className="size-3 rounded-full bg-white" />
@@ -33,10 +34,10 @@ function Dots({ size }: DotProps) {
       <div className="size-2 rounded-full bg-white" />
     </section>
   );
-
 }
 
 export function Window({
+  type,
   title,
   titleFont = "",
   color,
@@ -44,8 +45,6 @@ export function Window({
   height = "100%",
   children,
 }: WindowProps) {
-  const size = title !== undefined;
-
   return (
     <section
       style={{ width, height }}
@@ -59,7 +58,7 @@ export function Window({
         </div>
       <div className="size-full p-5 overflow-auto">{children}</div>
 
-      <Dots size={title !== undefined}/>
+      <Dots type={type}/>
     </section>
   );
 }
