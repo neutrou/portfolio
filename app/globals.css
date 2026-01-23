@@ -1,27 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --background: #363636;
-  --foreground: #ededed;
-  --red:        #FF6961;
-  --orange:     #FFC067;
-  --purple:     #A680ED;
-  --blue:       #9ACEFF;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+@theme {
+  --color-primary:        #0F172A;
+  --color-secondary:      #575D90;
+  --color-accent:         #49C6E5;
+  --color-text-primary:   #F7F5FB;
+	--color-text-secondary: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
+  --color-tag-text:       #BDF2FF;
+	--color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
+  --tag-glow:						0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
 }
 
 @layer utilities {
-  .border-texture {
-    @apply border-2 border-white;
-  }
-}
+	.title {
+		@apply tracking-[-10%] text-5xl font-bold text-text-primary
+	}
+	.subtitle {
+		@apply tracking-[-10%] text-3xl font-semibold text-text-primary
+	}
+	.default {
+		@apply tracking-[-10%] text-xl text-text-secondary
+	}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-jetbrains-mono);
+  .tag-glow {
+    text-shadow: var(--tag-glow);
+  }
 }

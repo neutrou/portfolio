@@ -1,55 +1,43 @@
 "use client"
 
-import { useState, useEffect } from "react";
-import { Button } from "./components/Button"
-import { motion, easeOut } from "framer-motion"
+import Icon from "./components/Icon"
+import ProjectCard from "./components/ProjectCard"
+import Separator from "./components/Separator";
 
 export default function Home() {
-  const [revealed, setRevealed] = useState(false);
-  const height = "calc(var(--spacing) * 90)";
-
-  const initialReveal = {
-    scaleX: 0,
-    originX: 0.5,
-    originY: 0.5,
-  };
-  const animateRevealA = {
-    scaleX: [0, 1, 1],
-    height: [0, 0, height],
-    borderColor: ["#fff", "#fff", "#fff0"],
-  };
-  const animateRevealB = {
-    scaleX: [0, 1, 1, 1],
-    height: [0, 0, height, height],
-    borderColor: ["#fff", "#fff", "#fff", "#fff0"],
-  };
-  /*choose between A and B*/
-  const animateReveal = animateRevealB;
-  const transitionReveal = {
-    duration: 1.5,
-    ease: easeOut,
-    delay: 0.4
-  };
-
   return (
-    <section className="flex-1 flex items-center justify-center">
-      <div className={`h-90 w-70 absolute flex flex-col ${revealed ? "pointer-events-none" : "pointer-events-auto"}`}>
-        <div className="bg-(--background) flex-1"/>
-          <motion.div
-            initial={initialReveal}
-            animate={animateReveal}
-            transition={transitionReveal}
-            onAnimationComplete={() => setRevealed(true)}
-            className="bg-transparent border-texture"
-          />
-          <div className="bg-(--background) flex-1"/>
-      </div>
-      <div className="h-90 w-70 flex flex-col justify-between">
-        <Button text="Summary" color="purple" url="/summary"/>
-        <Button text="About me" color="red" url="/about"/>
-        <Button text="Projects" color="blue" url="/projects"/>
-        <Button text="Tech Stack" color="orange" url="/stack"/>
-      </div>
-    </section>
-  );
+		<div className="flex flex-col gap-10">
+			{/* DESCRIPTION */}
+			<div className="flex flex-col gap-2.5">
+				<div className="flex flex-col gap-1.25">
+					<h1 className="title">Victor Algranti</h1>
+					<h2 className="subtitle">Software Engineer</h2>
+					<p className="default">I build software and solutions to complex problems, not big sentences to describe myself.</p>
+				</div>
+				<div className="flex flex-row gap-4">
+					<Icon url={"github"}/>
+					<Icon url={"linkedin"}/>
+				</div>
+			</div>
+			{/* CONTENT */}
+			<div className="flex flex-col gap-10">
+				{/* ABOUT */}
+				<div className="flex flex-col gap-3.75">
+					<h2 className="subtitle flex flex-col">About</h2>
+					<p className="default">I am a work-driven junior developer, who loves learning, solving problems, and helping others grow.</p>
+					<p className="default">Currently studying at 42, I am an active member of the student association committee.</p>
+					<p className="default">I am curious, and have different interests including machine learning, user interfaces, both board and video games.</p>
+					<p className="default">Outside of my studies, you can usually find me climbing, playing video games, or building side projects to solve dumb tasks.</p>
+				</div>
+				{/* RECENT PROJECTS */}
+				<div className="flex flex-col gap-7.5">
+					<h2 className="subtitle">Recent Projects</h2>
+					<Separator />
+					<ProjectCard slug={"red-tetris"}/>
+					<Separator />
+					<ProjectCard slug={"transcendance"}/>
+				</div>
+			</div>
+		</div>
+	);
 }

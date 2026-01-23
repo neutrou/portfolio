@@ -1,10 +1,14 @@
-import { JetBrains_Mono } from "next/font/google";
+import { Inter } from 'next/font/google'
 import "./globals.css";
+ 
+const inter = Inter({
+  subsets: ['latin'],
+})
 
-const JetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-});
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
 
 export default function RootLayout({
   children,
@@ -12,17 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"
-      className="size-full"
-    >
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body
-        className={`size-full ${JetBrainsMono.variable} flex-1 antialiased flex p-5`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`size-full ${inter.className}`}>
+      <body className={`size-full flex bg-primary pt-12.5 pb-12.5 pr-5 pl-5`}>{children}</body>
     </html>
   );
 }
