@@ -5,22 +5,22 @@
   --color-secondary:      #575D90;
   --color-accent:         #49C6E5;
   --color-text-primary:   #F7F5FB;
-	--color-text-secondary: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
+  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
   --color-tag-text:       #BDF2FF;
-	--color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
-  --tag-glow:						0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
+  --color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
+  --tag-glow:             0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
 }
 
 @layer utilities {
-	.title {
-		@apply tracking-[-10%] text-5xl font-bold text-text-primary
-	}
-	.subtitle {
-		@apply tracking-[-10%] text-3xl font-semibold text-text-primary
-	}
-	.default {
-		@apply tracking-[-10%] text-xl text-text-secondary
-	}
+  .title {
+    @apply tracking-[-10%] text-5xl font-bold text-text-primary
+  }
+  .subtitle {
+    @apply tracking-[-10%] text-3xl font-semibold text-text-primary
+  }
+  .default {
+    @apply tracking-[-10%] text-xl text-text-secondary
+  }
 
   .tag-glow {
     text-shadow: var(--tag-glow);
