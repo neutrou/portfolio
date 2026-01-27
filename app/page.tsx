@@ -6,7 +6,7 @@ import Separator from "./components/Separator";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 page-padding">
       {/* DESCRIPTION */}
       <div className="flex flex-col gap-2.5">
         <div className="flex flex-col gap-1.25">

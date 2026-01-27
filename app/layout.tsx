@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import "./globals.css";
+import { ReactNode } from 'react';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -10,14 +11,14 @@ export const viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+type Props = {
+  children: ReactNode;
+}
+
+export default function RootLayout(props: Props) {
   return (
     <html lang="en" className={`size-full ${inter.className}`}>
-      <body className={`width-full min-h-full h-fit flex bg-primary pt-12.5 pb-12.5 pr-5 pl-5`}>{children}</body>
+      <body className={`width-full min-h-full h-fit flex bg-primary`}>{props.children}</body>
     </html>
   );
 }

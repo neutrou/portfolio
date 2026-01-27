@@ -9,6 +9,7 @@
   --color-tag-text:       #BDF2FF;
   --color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
   --tag-glow:             0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
+  --progress:             0%;
 }
 
 @layer utilities {
@@ -20,6 +21,9 @@
   }
   .default {
     @apply tracking-[-10%] text-xl text-text-secondary
+  }
+  .page-padding {
+    @apply pt-12.5 pb-12.5 pr-5 pl-5
   }
 
   .tag-glow {
