@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect } from "react";
 
-type Props= {
+type Props = {
   children: ReactNode
 }
 
@@ -25,10 +25,9 @@ export default function ProjectsLayout(props: Props) {
 
   return (
     <div
-      // style={{backgroundColor: "rgba(255, 0, 0, var(--progress))" }}
-      style={{backgroundImage: "radial-gradient(circle 100px at 110% var(--progress), var(--color-accent), var(--color-primary))" }}
-      // style={{backgroundImage: "radial-gradient(circle 100px at center, var(--color-accent), var(--color-primary))" }}
-      >
+      className="w-full h-fit page-padding"
+      style={{backgroundImage: "radial-gradient(circle 100px at 110% var(--progress), var(--color-animation-glow), var(--color-primary))" }}
+    >
       {props.children}
     </div>
   );
