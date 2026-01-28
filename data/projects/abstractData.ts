@@ -11,7 +11,7 @@ const abstractData: Project = {
     }
   ],
   tags: ["C++98", "Algorithms", "Data Structures"],
-  year: 2025,
+  completionDay: new Date("2025-06-04"),
 }
 
 export default abstractData;
