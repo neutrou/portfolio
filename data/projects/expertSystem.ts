@@ -11,7 +11,7 @@ const expertSystem: Project = {
     }
   ],
   tags: ["AI", "Logic", "Inference"],
-  year: 2025,
+  completionDay: new Date("2025-08-18"),
 }
 
 export default expertSystem;

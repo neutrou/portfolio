@@ -66,7 +66,7 @@ const transcendence: Project = {
     },
   ],
   tags: ["Javascript", "Python", "PostgreSQL", "ELK", "Django", "Docker Compose"],
-  year: 2025,
+  completionDay: new Date("2025-02-27"),
 }
 
 export default transcendence;

@@ -11,7 +11,7 @@ const drQuine: Project =   {
     }
   ],
   tags: ["C", "x86-64", "Recursion", "Metaprogramming"],
-  year: 2025,
+  completionDay: new Date("2025-04-14"),
 }
 
 export default drQuine;

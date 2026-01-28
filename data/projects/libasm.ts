@@ -11,7 +11,7 @@ const libasm: Project = {
     }
   ],
   tags: ["Assembly", "x86-64", "Low-level"],
-  year: 2025,
+  completionDay: new Date("2025-04-07"),
 }
 
 export default libasm;

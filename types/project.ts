@@ -7,6 +7,6 @@ export type Project = {
   content: ProjectContentBlock[];
   tags: string[];
   pictures?: string[];
-  year: number;
+  completionDay: Date;
   link?: string;
 };

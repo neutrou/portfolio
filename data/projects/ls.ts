@@ -2,7 +2,7 @@ import { Project } from "@/types/project";
 
 const ls: Project = {
   slug: "ls",
-  title: "ft_ls",
+  title: "ls",
   description: "Reimplementation of the Unix ls command with support for common flags.",
   content: [
     {
@@ -11,7 +11,7 @@ const ls: Project = {
     }
   ],
   tags: ["C", "Unix", "Filesystem", "System"],
-  year: 2025,
+  completionDay: new Date("2025-07-10"),
 }
 
 export default ls;

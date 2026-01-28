@@ -11,7 +11,7 @@ const gomoku: Project = {
     }
   ],
   tags: ["C++17", "AI", "Game Theory", "Algorithms", "Qt5", "Min-Max"],
-  year: 2025,
+  completionDay: new Date("2025-10-10"),
 }
 
 export default gomoku;

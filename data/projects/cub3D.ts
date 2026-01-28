@@ -11,7 +11,7 @@ const cub3D: Project = {
     }
   ],
   tags: ["C", "Graphics", "Raycasting"],
-  year: 2024,
+  completionDay: new Date("2024-08-14"),
 }
 
 export default cub3D;

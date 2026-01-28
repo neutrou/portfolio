@@ -11,7 +11,7 @@ const multilayerPerceptron: Project = {
     }
   ],
   tags: ["Machine Learning", "Neural Networks", "Math"],
-  year: 2025,
+  completionDay: new Date("2025-08-20"),
 }
 
 export default multilayerPerceptron;

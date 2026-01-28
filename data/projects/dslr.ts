@@ -11,7 +11,7 @@ const dslr: Project = {
     }
   ],
   tags: ["Data Science", "Logistic Regression", "Python"],
-  year: 2025,
+  completionDay: new Date("2025-04-09"),
 }
 
 export default dslr;

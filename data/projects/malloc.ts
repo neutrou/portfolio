@@ -11,7 +11,7 @@ const malloc: Project = {
     }
   ],
   tags: ["C", "Unix", "Memory", "System"],
-  year: 2025,
+  completionDay: new Date("2025-05-19"),
 }
 
 export default malloc;

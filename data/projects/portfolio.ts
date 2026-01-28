@@ -11,7 +11,7 @@ const portfolio: Project = {
     }
   ],
   tags: ["React", "TypeScript", "UI"],
-  year: 2026,
+  completionDay: new Date("2026-02-02"),
 }
 
 export default portfolio;

@@ -11,7 +11,7 @@ const webserv: Project = {
     }
   ],
   tags: ["C++98", "Network", "HTTP"],
-  year: 2025,
+  completionDay: new Date("2024-11-07"),
 }
 
 export default webserv;

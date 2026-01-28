@@ -34,7 +34,7 @@ const redTetris: Project = {
     },
   ],
   tags: ["Javascript", "React", "NodeJS", "PrismaDB", "Jest"],
-  year: 2026,
+  completionDay: new Date("2026-01-23"),
 }
 
 export default redTetris;
