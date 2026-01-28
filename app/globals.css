@@ -1,32 +1,67 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary:        #0F172A;
-  --color-secondary:      #575D90;
-  --color-accent:         #49C6E5;
-  --color-text-primary:   #F7F5FB;
-  --color-text-secondary: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
-  --color-tag-text:       #BDF2FF;
-  --color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
-  --tag-glow:             0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
-  --progress:             0%;
+	--color-primary:        #0F172A;
+	--color-secondary:      #575D90;
+	--color-accent:         #49C6E5;
+	--color-text-primary:   #F7F5FB;
+	--color-text-secondary: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
+	--color-tag-text:       #BDF2FF;
+	--color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
+	--color-animation-glow: color-mix(in srgb, var(--color-accent) 80%, transparent);
+	--tag-glow:             0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
+	--progress:             0%;
+}
+
+:root {
+	--title-size: 3rem;
+	--subtitle-size: 1.875rem;
+	--default-size: 1.25rem;
+	--tracking-tight: -0.1em;
+	--text-primary: var(--color-text-primary);
+	--text-secondary: var(--color-text-secondary);
+	--page-padding-y: 3.125rem;
+	--page-padding-x: 1.25rem;
 }
 
 @layer utilities {
-  .title {
-    @apply tracking-[-10%] text-5xl font-bold text-text-primary
-  }
-  .subtitle {
-    @apply tracking-[-10%] text-3xl font-semibold text-text-primary
-  }
-  .default {
-    @apply tracking-[-10%] text-xl text-text-secondary
-  }
-  .page-padding {
-    @apply pt-12.5 pb-12.5 pr-5 pl-5
-  }
+	.title {
+		font-size: var(--title-size);
+		font-weight: 700;
+		letter-spacing: var(--tracking-tight);
+		color: var(--text-primary);
+	}
 
-  .tag-glow {
-    text-shadow: var(--tag-glow);
-  }
+	.subtitle {
+		font-size: var(--subtitle-size);
+		font-weight: 600;
+		letter-spacing: var(--tracking-tight);
+		color: var(--text-primary);
+	}
+
+	.default {
+		font-size: var(--default-size);
+		letter-spacing: var(--tracking-tight);
+		color: var(--text-secondary);
+	}
+
+	.page-padding {
+		padding: var(--page-padding-y) var(--page-padding-x);
+	}
+
+	.tag-glow {
+		text-shadow: var(--tag-glow);
+	}
+
+	.no-scrollbar {
+		scrollbar-width: none;
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.tracking-tightest {
+		letter-spacing: var(--tracking-tight);
+	}
 }

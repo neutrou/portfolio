@@ -17,7 +17,7 @@ type Props = {
 
 export default function RootLayout(props: Props) {
   return (
-    <html lang="en" className={`size-full ${inter.className}`}>
+    <html lang="en" className={`size-full ${inter.className} no-scrollbar`}>
       <body className={`width-full min-h-full h-fit flex bg-primary`}>{props.children}</body>
     </html>
   );
