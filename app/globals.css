@@ -21,8 +21,25 @@
 	--tracking-tight: -0.1em;
 	--text-primary: var(--color-text-primary);
 	--text-secondary: var(--color-text-secondary);
-	--page-padding-y: 3.125rem;
+	--page-padding-y: 2.5rem;
 	--page-padding-x: 1.25rem;
+	--project-title-size: 1.25rem;
+	--project-default-size: 1rem;
+	--project-tracking: -0.05em;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--page-padding-x: 2rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	:root {
+		--title-size: 3.5rem;
+		--subtitle-size: 2.5rem;
+		--default-size: 1.75rem;
+	}
 }
 
 @layer utilities {
@@ -64,5 +81,17 @@
 
 	.tracking-tightest {
 		letter-spacing: var(--tracking-tight);
+	}
+
+	.project-title {
+		color: var(--color-text-primary);
+		font-weight: 600;
+		font-size: var(--project-title-size);
+		letter-spacing: var(--project-tracking);
+	}
+
+	.project-default {
+		color: var(--color-text-secondary);
+		font-size: var(--project-default-size);
 	}
 }
