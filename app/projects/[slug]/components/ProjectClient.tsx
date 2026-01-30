@@ -7,6 +7,7 @@ import Link from "next/link"
 import { highlightText } from "../../../utils/project";
 import ProjectImage from "@/app/projects/[slug]/components/ProjectImage";
 import { Project } from "@/types/project";
+import Title from "@/app/components/Title";
 
 type Props = {
   project: Project;
@@ -15,12 +16,7 @@ type Props = {
 export default function ProjectClient(props: Props) {
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex-1 flex flex-row justify-between items-center">
-        <h1 className="tracking-tightest text-[42px] font-bold text-text-primary">{props.project.title}</h1>
-        <Link href="/">
-          <Icon url="arrow" height={45} width={45}/>
-        </Link>
-      </div>
+      <Title title={props.project.title} />
       <div className="tracking-tightest text-3xl font-semibold text-text-secondary flex flex-col gap-3">
         {props.project.content.map((element, index) => {
           if (element.type === "text")

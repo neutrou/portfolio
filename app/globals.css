@@ -8,6 +8,7 @@
 	--color-text-secondary: color-mix(in srgb, var(--color-text-primary) 40%, transparent);
 	--color-tag-text:       #BDF2FF;
 	--color-tag-bg:         color-mix(in srgb, var(--color-accent) 20%, transparent);
+	--color-project-bg:     color-mix(in srgb, var(--color-accent) 10%, transparent);
 	--color-animation-glow: color-mix(in srgb, var(--color-accent) 80%, transparent);
 	--tag-glow:             0px 0px 2px #41D9FF, 0px 0px 2px #41D9FF;
 	--progress:             0%;
