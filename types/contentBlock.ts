@@ -11,4 +11,4 @@ export type ProjectContentBlock =
 
 export type ImageBlock = Extract<ProjectContentBlock, { type: "image" }>;
 
-export type TextBlock = Extract<ProjectContentBlock, { type: "image" }>;
+export type TextBlock = Extract<ProjectContentBlock, { type: "text" }>;

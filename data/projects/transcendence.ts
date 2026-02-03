@@ -19,10 +19,10 @@ const transcendence: Project = {
       src: "profile",
       alt: "The profile page of the website"
     },
-    {
-      type: "text",
-      content: "The game rendering and animations are handled with THREE.js, enabling smooth real-time visuals directly in the browser.",
-    },
+    // {
+    //   type: "text",
+    //   content: "The game rendering and animations are handled with THREE.js, enabling smooth real-time visuals directly in the browser.",
+    // },
     {
       type: "image",
       src: "game",
