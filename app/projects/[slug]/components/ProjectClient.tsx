@@ -46,6 +46,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function ProjectClient(props: Props) {
   const texts = getAllTexts(props.project.content);
   const images = getAllImages(props.project.content);
+  console.log("images:", images);
   const lg = useIsLg();
 
   return (
@@ -64,7 +65,7 @@ export default function ProjectClient(props: Props) {
             })}
           </div>) ||
           (lg &&
-            <div className="tracking-tightest text-3xl font-semibold text-text-secondary flex flex-col gap-10">
+            <div className="h-full tracking-tightest text-3xl font-semibold text-text-secondary flex flex-col gap-10 justify-center">
               {texts && texts.map((element, index) => {
                 return (<p key={index}>{highlightText(element.content)}</p>);
               })}
@@ -72,7 +73,7 @@ export default function ProjectClient(props: Props) {
           )
         }
       </div>
-      {lg && images &&
+      {lg && images && images.length !== 0 &&
         <div className="flex flex-col items-center justify-center gap-10 w-full min-h-full">
           <EmblaCarousel slug={props.project.slug} slides={images} options={{loop: true}}/>
         </div>

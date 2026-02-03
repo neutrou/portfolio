@@ -8,14 +8,15 @@ type Props = {
 
 export default function ProjectImage(props: Props) {
   return (
-    <div className="relative w-full lg:size-full aspect-video">
+    <div className="relative w-full aspect-auto">
       <Image
         src={`/projects/${props.slug}/${props.contentBlock.src}.png`}
         alt={props.contentBlock.alt}
+        width={0}
+        height={0}
         sizes="100vw"
-        className="object-cover border-3 border-text-secondary rounded-md overflow-hidden opacity-80"
-        preload
-        fill
+        style={{ width: '100%', height: 'auto' }}
+        className="border-3 border-text-secondary rounded-md opacity-80"
       />
     </div>
   );

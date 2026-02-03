@@ -34,8 +34,6 @@ const EmblaCarousel = (props: PropType) => {
   const { autoplayIsPlaying, toggleAutoplay, onAutoplayButtonClick } = useAutoplay(emblaApi);
   const { showAutoplayProgress } = useAutoplayProgress(emblaApi, progressNode);
 
-  console.log("progress:", showAutoplayProgress);
-
   return (
     <div className={styles.carousel}>
       <section className="embla">
