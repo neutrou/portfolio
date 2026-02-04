@@ -72,7 +72,7 @@ const gomoku: Project = {
     },
   ],
   tags: ["CPP", "Qt5", "Minimax", "AI", "Algorithms", "Game Engine"],
-  completionDay: new Date("2024-12-15"),
+  completionDay: new Date("2025-12-15"),
 };
 
 export default gomoku;
