@@ -1,22 +1,9 @@
-import { ReactNode } from "react";
 import Link from "next/link"
 import getProject from "../utils/project";
-import { notFound } from "next/navigation";
-
-type TagProps = {
-  children: ReactNode;
-}
+import Tag from "./Tag";
 
 type ProjectCardProps = {
   slug: string;
-}
-
-function Tag(props: TagProps) {
-  return (
-    <div className="size-fit bg-tag-bg text-xs text-tag-text p-1.5 rounded-[20px] tag-glow">
-      {props.children}
-    </div>
-  );
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
