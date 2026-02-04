@@ -20,6 +20,7 @@ export const KEYWORDS: string[] = [
   "Minimax",
   "move history system",
   "MUI",
+  "Next.js",
   "Node.js",
   "null-move pruning",
   "OAuth2",
@@ -30,6 +31,8 @@ export const KEYWORDS: string[] = [
   "React",
   "Tailwind CSS",
   "THREE.js",
+  "TypeScript",
   "transposition tables",
   "Socket.IO",
+  "Vercel",
 ]
