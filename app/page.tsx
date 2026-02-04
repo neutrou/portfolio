@@ -11,11 +11,11 @@ export default function Home() {
       <div className="flex flex-col gap-10 page-padding md:flex-row md:gap-0 lg:max-w-[90%]">
         {/* DESCRIPTION */}
         <div className="md:min-w-[50%]">
-          <div className="flex flex-col gap-2.5 md:h-[83vh] md:justify-between md:fixed">
+          <div className="flex flex-col gap-2.5 md:h-[88%] md:justify-between md:fixed">
             <div className="flex flex-col gap-1.25">
               <h1 className="title">Victor Algranti</h1>
               <h2 className="subtitle">Software Engineer</h2>
-              <p className="default max-w-80 lg:max-w-110">I build software and solutions to complex problems, not big sentences to describe myself.</p>
+              <p className="default max-w-80 lg:max-w-110">I build software and solutions to complex problems.</p>
             </div>
             <div className="flex flex-row gap-4 md:justify-center">
               <Icon url={"github"} width={35} height={35}/>

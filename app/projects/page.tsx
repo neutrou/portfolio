@@ -8,23 +8,23 @@ export default function ProjectsPage() {
   sortedProjects.sort((a, b) => {return b.completionDay.valueOf() - a.completionDay.valueOf()});
 
   return (
-    <div className="w-full h-fit page-padding">
-      <div className="flex flex-col gap-10">
+    <div className="w-full h-fit page-padding flex justify-center">
+      <div className="flex flex-col gap-10 size-fit">
         {/*DESCRIPTION*/}
         <div className="flex flex-col">
           <Title title={"Projects"}/>
         </div>
         {/*CONTENT*/}
         <div>
-          <div className="flex-1 flex flex-col">
-              <div className="w-full flex flex-row tracking-tightest text-3xl font-bold text-text-primary text-left pb-2.5 md:text-4xl">
-                <span className="min-w-14 pr-2 md:min-w-20">
+          <div className="flex flex-col w-fit lg:gap-1">
+              <div className="w-full flex flex-row tracking-tightest text-3xl font-bold text-text-primary text-left pb-2.5 lg:text-4xl">
+                <span className="min-w-14 pr-2 lg:min-w-20">
                   Year
                 </span>
-                <span className="min-w-60 pr-2 pl-2 md:min-w-80">
+                <span className="min-w-54 pr-2 pl-2 lg:min-w-80">
                   Project
                 </span>
-                <span className="hidden md:flex md:w-full">
+                <span className="hidden md:flex md:min-w-125 lg:min-w-150">
                   Tags
                 </span>
               </div>
@@ -34,15 +34,15 @@ export default function ProjectsPage() {
                     <Link
                       href={`/projects/${element.slug}`}
                       key={index}
-                      className="flex flex-row tracking-tightest text-left text-2xl pt-0.5 pb-0.5 md:text-3xl"
+                      className="flex flex-row tracking-tightest text-left text-2xl pt-0.5 pb-0.5 lg:text-3xl"
                     >
-                      <span className="min-w-14 text-text-secondary font-normal pr-2 md:min-w-20">
+                      <span className="min-w-14 text-text-secondary font-normal pr-2 lg:min-w-20">
                         {element.completionDay.getFullYear()}
                       </span>
-                      <span className="min-w-60 text-text-primary font-normal pr-2 pl-2 md:min-w-80">
+                      <span className="min-w-54 text-text-primary font-normal pr-2 pl-2 lg:min-w-80">
                         {element.title}
                       </span>
-                      <span className="hidden text-text-primary font-normal pr-2 pl-2 md:w-full md:flex flex-row gap-4">
+                      <span className="hidden text-text-primary font-normal pr-2 pl-2 md:w-125 md:flex lg:min-w-150 flex-row gap-4">
                         {element.tags.map((ele, i) => {
                           return <Tag key={i}>{ele}</Tag>
                         })}

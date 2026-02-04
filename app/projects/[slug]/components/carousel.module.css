@@ -33,9 +33,8 @@
   padding: 0.1rem;
 }
 .carousel :global(.embla__controls) {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
   gap: 1.2rem;
   margin-top: 1.8rem;
   padding-right: 0.3rem;

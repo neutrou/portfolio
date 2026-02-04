@@ -5,24 +5,8 @@ import ProjectImage from "@/app/projects/[slug]/components/ProjectImage";
 import { Project } from "@/types/project";
 import Title from "@/app/components/Title";
 import { ProjectContentBlock, ImageBlock, TextBlock } from "@/types/contentBlock";
-import { useEffect, useState } from "react";
 import EmblaCarousel from "./Carousel";
-
-function useIsLg() {
-  const [isLg, setIsLg] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia("(min-width: 1024px)");
-
-    const update = () => setIsLg(media.matches);
-    update();
-
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
-
-  return isLg;
-}
+import { useIsLg } from "@/app/utils/useIsLg";
 
 type Props = {
   project: Project;
@@ -46,7 +30,6 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function ProjectClient(props: Props) {
   const texts = getAllTexts(props.project.content);
   const images = getAllImages(props.project.content);
-  console.log("images:", images);
   const lg = useIsLg();
 
   return (
