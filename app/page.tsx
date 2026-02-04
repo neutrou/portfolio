@@ -18,8 +18,12 @@ export default function Home() {
               <p className="default max-w-80 lg:max-w-110">I build software and solutions to complex problems.</p>
             </div>
             <div className="flex flex-row gap-4 md:justify-center">
-              <Icon url={"github"} width={35} height={35}/>
-              <Icon url={"linkedin"} width={35} height={35}/>
+              <Link href={"https://github.com/neutrou/"}>
+                <Icon url={"github"} width={35} height={35}/>
+              </Link>
+              <Link href={"https://www.linkedin.com/in/victor-algranti"}>
+                <Icon url={"linkedin"} width={35} height={35}/>
+              </Link>
             </div>
           </div>
         </div>
