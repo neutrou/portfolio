@@ -6,7 +6,7 @@ import { Project } from "@/types/project";
 import Title from "@/app/components/Title";
 import { ProjectContentBlock, ImageBlock, TextBlock } from "@/types/contentBlock";
 import EmblaCarousel from "./Carousel";
-import { useIsLg } from "@/app/utils/useIsLg";
+import { useIsLg } from "@/app/hooks/useIsLg";
 
 type Props = {
   project: Project;

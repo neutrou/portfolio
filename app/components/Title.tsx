@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Icon from "./Icon"
-import { useIsLg } from "../utils/useIsLg";
+import { useIsLg } from "../hooks/useIsLg";
 
 type Props = {
   title: string;
