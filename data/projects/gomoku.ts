@@ -71,7 +71,7 @@ const gomoku: Project = {
       alt: "CLI-based AI versus AI match output"
     },
   ],
-  tags: ["CPP", "Qt5", "Minimax", "AI", "Algorithms", "Game Engine"],
+  tags: ["CPP17", "Qt5", "Minimax", "AI", "Algorithms", "Game Engine"],
   completionDay: new Date("2025-12-15"),
 };
 

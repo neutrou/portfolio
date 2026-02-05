@@ -38,18 +38,13 @@ const portfolio: Project = {
     {
       type: "text",
       content:
-        "The portfolio follows a component-driven architecture, with reusable UI primitives and structured content blocks to keep presentation and data cleanly separated."
+        "Deployed on Vercel, the project benefits from automatic builds, optimized asset delivery, and fast global performance, aligning with the goal of a smooth and reliable user experience."
     },
     {
       type: "image",
       src: "projects",
       alt: "the /project page, but on mobile"
     },
-    {
-      type: "text",
-      content:
-        "Deployed on Vercel, the project benefits from automatic builds, optimized asset delivery, and fast global performance, aligning with the goal of a smooth and reliable user experience."
-    }
   ],
   tags: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vercel", "UI"],
   completionDay: new Date("2026-02-02"),
