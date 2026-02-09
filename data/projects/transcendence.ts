@@ -12,17 +12,13 @@ const transcendence: Project = {
     },
     {
       type: "text",
-      content: "A full-stack multiplayer Pong platform built with a JavaScript frontend and a Django backend, designed around real-time interaction and strong security guarantees.",
+      content: "A full-stack multiplayer Pong platform built with a JavaScript frontend and a Django backend, designed around real-time interactions.",
     },
     {
       type: "image",
       src: "profile",
       alt: "The profile page of the website"
     },
-    // {
-    //   type: "text",
-    //   content: "The game rendering and animations are handled with THREE.js, enabling smooth real-time visuals directly in the browser.",
-    // },
     {
       type: "image",
       src: "game",
@@ -39,7 +35,7 @@ const transcendence: Project = {
     },
     {
       type: "text",
-      content: "User profiles track match history, statistics, and achievements, unlocking visual customizations such as earned color themes.",
+      content: "User profiles track match history, statistics, and achievements, unlocking visual customizations.",
     },
     {
       type: "image",

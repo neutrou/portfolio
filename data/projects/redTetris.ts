@@ -7,34 +7,55 @@ const redTetris: Project = {
   content: [
     {
       type: "text",
-      content: "A modern full-stack tetris game built only in JavaScript with a React frontend and a Node.js backend."
+      content:
+        "A modern full-stack Tetris game built entirely in JavaScript, designed as a single-page application with a React frontend and a Node.js backend."
+    },
+    {
+      type: "text",
+      content:
+        "The project focuses on real-time multiplayer gameplay, requiring low-latency communication, synchronized state, and responsive UI updates."
     },
     {
       type: "image",
       src: "login",
-      alt: "The login page of the website",
+      alt: "Login page of the Red Tetris application"
     },
     {
       type: "text",
-      content: "Real-time gameplay is powered by Socket.IO, data persistence is managed with Prisma, and the UI combines Material UI with Tailwind CSS."
+      content:
+        "Real-time interactions are powered by Socket.IO, enabling live multiplayer matches and spectator features. Game data and user persistence are handled through Prisma and a relational database."
     },
     {
       type: "image",
       src: "menu",
-      alt: "The menu page of the website",
+      alt: "Main menu and matchmaking interface"
     },
     {
       type: "text",
-      content: "The codebase is covered by Jest tests and integrated into a CI pipeline using GitHub Actions."
+      content:
+        "The user interface combines Material UI components with Tailwind CSS, balancing rapid development with control over layout and styling."
     },
     {
       type: "image",
       src: "solo",
-      alt: "The game being played in solo mode",
+      alt: "Solo gameplay mode in Red Tetris"
     },
+    {
+      type: "text",
+      content:
+        "The codebase is covered by automated tests written with Jest and integrated into a CI pipeline using GitHub Actions to ensure reliability and prevent regressions."
+    }
   ],
-  tags: ["Javascript", "React", "NodeJS", "PrismaDB", "Jest"],
+  tags: [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Socket.IO",
+    "Prisma",
+    "Real-time",
+    "Multiplayer"
+  ],
   completionDay: new Date("2026-01-23"),
-}
+};
 
 export default redTetris;

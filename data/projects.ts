@@ -13,4 +13,19 @@ import redTetris from '@/data/projects/redTetris';
 import transcendence from '@/data/projects/transcendence';
 import webserv from '@/data/projects/webserv';
 
-export const projects = [abstractData, cub3D, drQuine, dslr, expertSystem, gomoku, libasm, ls, malloc, multilayerPerceptron, portfolio, redTetris, transcendence, webserv];
+export const projects = [
+  // abstractData,
+  cub3D,
+  drQuine,
+  dslr,
+  expertSystem,
+  gomoku,
+  libasm,
+  ls,
+  malloc,
+  multilayerPerceptron,
+  portfolio,
+  redTetris,
+  transcendence,
+  webserv
+];

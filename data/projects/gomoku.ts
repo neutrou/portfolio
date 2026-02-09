@@ -53,25 +53,15 @@ const gomoku: Project = {
     {
       type: "text",
       content:
-        "The AI engine is tested via automated scenarios and CLI tools for correctness and performance.",
+        "The AI engine is tested through automated scenarios and CLI tools, including an arena mode where multiple AI configurations compete.",
     },
     {
       type: "image",
       src: "cli0",
       alt: "Command-line interface game mode"
     },
-    {
-      type: "text",
-      content:
-        "An cli arena mode allows multiple AI configurations to compete against each other, making the project a complete experimentation platform for game AI.",
-    },
-    {
-      type: "image",
-      src: "cli1",
-      alt: "CLI-based AI versus AI match output"
-    },
   ],
-  tags: ["CPP", "Qt5", "Minimax", "AI", "Algorithms", "Game Engine"],
+  tags: ["CPP17", "Qt5", "Minimax", "AI", "Algorithms", "Game Engine"],
   completionDay: new Date("2025-12-15"),
 };
 

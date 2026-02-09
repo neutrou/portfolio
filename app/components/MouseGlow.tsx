@@ -1,12 +1,11 @@
-// components/MouseGlow.tsx
-"use client"
+"use client";
 
-import { useIsLg } from "../hooks/useIsLg"
-import useMousePosition from "../hooks/useMousePos"
+import { useIsLg } from "../hooks/useIsLg";
+import useMouseGlow from "../hooks/useMouseGlow";
 
 export default function MouseGlow() {
-  const { x, y } = useMousePosition()
-  const isLg = useIsLg() 
+  const { x, y } = useMouseGlow(0.1);
+  const isLg = useIsLg();
 
   return (
     <div
@@ -17,7 +16,11 @@ export default function MouseGlow() {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <div className={`w-64 h-64 rounded-full ${isLg ? "bg-accent/30" : "transparent"} blur-3xl`} />
+      <div
+        className={`w-64 h-64 rounded-full ${
+          isLg ? "bg-accent/30" : "transparent"
+        } blur-3xl`}
+      />
     </div>
-  )
+  );
 }
