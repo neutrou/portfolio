@@ -41,7 +41,7 @@ const EmblaCarousel = (props: PropType) => {
           <div className="embla__container">
             {slides.map((element, index) => (
               <div className="embla__slide" key={index}>
-                <div className="embla__slide__number">
+                <div className="flex items-center justify-center h-[70vh]">
                   <ProjectImage slug={props.slug} contentBlock={element} />
                 </div>
               </div>
@@ -49,10 +49,6 @@ const EmblaCarousel = (props: PropType) => {
           </div>
         </div>
         <div className="embla__controls">
-          {/* <div className="embla__buttons">
-            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-          </div> */}
           <div className="embla__progress">
             <div className="embla__progress__bar" ref={progressNode} />
           </div>

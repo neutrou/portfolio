@@ -24,9 +24,6 @@ function getAllTexts(blocks: ProjectContentBlock[]): TextBlock[]|null {
   );
 }
 
-const SLIDE_COUNT = 17
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
 export default function ProjectClient(props: Props) {
   const texts = getAllTexts(props.project.content);
   const images = getAllImages(props.project.content);

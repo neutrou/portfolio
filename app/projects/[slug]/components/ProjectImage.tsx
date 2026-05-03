@@ -8,16 +8,14 @@ type Props = {
 
 export default function ProjectImage(props: Props) {
   return (
-    <div className="relative h-full aspect-auto">
-      <Image
-        src={`/projects/${props.slug}/${props.contentBlock.src}.png`}
-        alt={props.contentBlock.alt}
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ height: '100%', width: 'auto' }}
-        className="object-contain border-3 border-text-secondary rounded-md opacity-80"
-      />
-    </div>
+    <Image
+      src={`/projects/${props.slug}/${props.contentBlock.src}.png`}
+      alt={props.contentBlock.alt}
+      width={0}
+      height={0}
+      sizes="100vw"
+      style={{ width: 'auto', height: 'auto' }}
+      className="max-h-full max-w-full object-contain border-3 border-text-secondary rounded-md opacity-80"
+    />
   );
 }
