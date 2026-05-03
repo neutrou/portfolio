@@ -1,27 +1,39 @@
-import Link from "next/link"
-import getProject from "../utils/project";
-import Tag from "./Tag";
+import Link from 'next/link';
+import getProject from '../utils/project';
+import Tag from './Tag';
 
-type ProjectCardProps = {
+interface ProjectCardProps {
   slug: string;
 }
 
-export default function ProjectCard(props: ProjectCardProps) {
-  const project = getProject(props.slug);
+const ERROR_MESSAGE = 'Project not found';
+
+export default function ProjectCard({ slug }: ProjectCardProps) {
+  const project = getProject(slug);
 
   if (!project) {
-    return <div>
-      project not found lol
-    </div>
+    return (
+      <div className="text-text-secondary text-base md:text-lg">
+        {ERROR_MESSAGE}
+      </div>
+    );
   }
+
   return (
-    <Link href={`projects/${project.slug}`} className="flex flex-col gap-2.5">
-      <h1 className="project-title">{project.title}</h1>
-      <p className="text-text-secondary text-base md:text-lg">{project.description}</p>
+    <Link
+      href={`projects/${project.slug}`}
+      className="group flex flex-col gap-2.5 hover:opacity-80 transition-opacity"
+    >
+      <h2 className="project-title text-text-primary group-hover:text-accent transition-colors">
+        {project.title}
+      </h2>
+      <p className="text-text-secondary text-base md:text-lg">
+        {project.description}
+      </p>
       <div className="flex flex-row gap-2.5 flex-wrap">
-        {project.tags.map((tag) => {
-          return (<Tag key={tag}>{tag}</Tag>);
-        })}
+        {project.tags.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
       </div>
     </Link>
   );

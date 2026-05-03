@@ -1,13 +1,19 @@
-import { projects } from "@/data/projects";
-import { Project } from "@/types/project";
-import { KEYWORDS } from "@/data/keywords";
+import { ReactNode } from 'react';
+import { projects } from '@/data/projects';
+import { Project } from '@/types/project';
+import { KEYWORDS } from '@/data/keywords';
 
-export function highlightText(text: string) {
-  const regex = new RegExp(`\\b(${KEYWORDS.join("|")})\\b`, "g");
+/**
+ * Highlights keywords in text by wrapping them in span elements
+ * @param text - The text to highlight
+ * @returns JSX array with highlighted keywords
+ */
+export function highlightText(text: string): ReactNode[] {
+  const regex = new RegExp(`\\b(${KEYWORDS.join('|')})\\b`, 'g');
 
-  return text.split(regex).map((part, i) =>
+  return text.split(regex).map((part, index) =>
     KEYWORDS.includes(part) ? (
-      <span key={i} className="text-text-primary">
+      <span key={`${part}-${index}`} className="text-text-primary">
         {part}
       </span>
     ) : (
@@ -16,6 +22,11 @@ export function highlightText(text: string) {
   );
 }
 
-export default function getProject(slug: string): Project|null {
-  return projects.find(project => project.slug === slug) ?? null;
+/**
+ * Retrieves a project by its slug
+ * @param slug - The project slug
+ * @returns The project object or null if not found
+ */
+export default function getProject(slug: string): Project | null {
+  return projects.find((project) => project.slug === slug) ?? null;
 }

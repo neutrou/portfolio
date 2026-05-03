@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useIsLg() {
+export function useIsLg(): boolean {
   const [isLg, setIsLg] = useState(false);
 
   useEffect(() => {
@@ -15,3 +15,5 @@ export function useIsLg() {
 
   return isLg;
 }
+
+export default useIsLg;
