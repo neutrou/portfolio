@@ -15,7 +15,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: 'Victor Algranti — Rebranding',
+  title: 'Victor Algranti',
   description: 'My portfolio is currently being rebranded. The website is temporarily unavailable. Stay connected on GitHub and LinkedIn.',
 };
 
