@@ -1,24 +1,36 @@
-"use client"
+'use client';
 
-import { useRouter } from "next/navigation";
-import Icon from "./Icon"
-import { useIsLg } from "../hooks/useIsLg";
+import { useCallback } from 'react';
+import { useRouter } from 'next/navigation';
+import Icon from './Icon';
+import { useIsLg } from '../hooks/useIsLg';
 
-type Props = {
+interface TitleProps {
   title: string;
 }
 
-export default function Title(props: Props) {
+export default function Title({ title }: TitleProps) {
   const router = useRouter();
   const lg = useIsLg();
-  const size = lg ? 60 : 45; 
+  const iconSize = lg ? 60 : 45;
+
+  const handleGoBack = useCallback(() => {
+    router.back();
+  }, [router]);
 
   return (
     <div className="w-full flex flex-row justify-between items-center">
-      <h1 className="tracking-tightest text-[42px] font-bold text-text-primary lg:text-6xl">{props.title}</h1>
-      <div onClick={() => {router.back()}}>
-        <Icon url="arrow" height={size} width={size}/>
-      </div>
+      <h1 className="tracking-tightest text-[42px] font-bold text-text-primary lg:text-6xl">
+        {title}
+      </h1>
+      <button
+        onClick={handleGoBack}
+        className="p-2 hover:opacity-80 transition-opacity"
+        aria-label="Go back to previous page"
+        type="button"
+      >
+        <Icon url="arrow" height={iconSize} width={iconSize} alt="Back arrow" />
+      </button>
     </div>
-  )
+  );
 }

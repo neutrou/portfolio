@@ -1,18 +1,22 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
-type IconProps = {
+interface IconProps {
   width: number;
   height: number;
   url: string;
+  alt?: string;
+  className?: string;
 }
 
-export default function Icon(props: IconProps) {
+export default function Icon({ width, height, url, alt, className }: IconProps) {
   return (
     <Image
-      src={`/${props.url}.svg`}
-      width={props.width}
-      height={props.height}
-      alt={`${props.url} icon`}
+      src={`/${url}.svg`}
+      width={width}
+      height={height}
+      alt={alt ?? `${url} icon`}
+      className={className}
+      priority={false}
     />
-  )
+  );
 }
