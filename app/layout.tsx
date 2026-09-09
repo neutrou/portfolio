@@ -15,8 +15,8 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: 'Victor Algranti - Portfolio',
-  description: 'Software Engineer portfolio showcasing projects and experience.',
+  title: 'Victor Algranti — Rebranding',
+  description: 'My portfolio is currently being rebranded. The website is temporarily unavailable. Stay connected on GitHub and LinkedIn.',
 };
 
 interface RootLayoutProps {
